@@ -1,27 +1,77 @@
-# PolygonApp
+# Polygon-App (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+## Описание
 
-## Development server
+**Polygon-App** - это клиентская часть проекта **CheckerPolygon**, написанная на Angular. Это приложение предоставляет интерфейс для взаимодействия с полигонами, позволяя пользователю рисовать, сохранять и проверять точки внутри полигона.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Требования
 
-## Code scaffolding
+- Node.js 18+
+- npm 9+
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Установка и Запуск
 
-## Build
+### Установка зависимостей
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Для установки всех необходимых зависимостей используйте команду:
 
-## Running unit tests
+```bash
+npm install --legacy-peer-deps
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Запуск в режиме разработки
 
-## Running end-to-end tests
+Для запуска приложения в режиме разработки выполните:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm start
+```
 
-## Further help
+Приложение будет доступно по адресу: `http://localhost:4200`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Сборка для продакшн
+
+Для сборки проекта для продакшн используйте команду:
+
+```bash
+npm run build
+```
+
+После успешной сборки, все файлы будут находиться в папке `dist/polygon-app`.
+
+### Запуск SSR (Server-Side Rendering)
+
+Для сборки и запуска серверной версии приложения используйте следующую команду:
+
+```bash
+npm run build:ssr && npm run serve:ssr:polygon-app
+```
+
+Приложение будет доступно по адресу: `http://localhost:4000`
+
+## Docker
+
+Для создания Docker-образа фронтенд части выполните команду:
+
+```bash
+docker build -t polygon-app-frontend .
+```
+
+Для запуска контейнера используйте команду:
+
+```bash
+docker run -p 80:4000 polygon-app-frontend
+```
+
+## Структура проекта
+
+- `src/` - исходный код приложения.
+- `src/app/` - основная логика приложения.
+- `src/environments/` - конфигурационные файлы для разных окружений (development/production).
+- `src/assets/` - статические ресурсы, такие как изображения и стили.
+
+## Примечания
+
+- Для запуска приложения убедитесь, что backend-сервис также запущен и доступен по указанному в конфигурации адресу.
+- Если возникает ошибка при установке зависимостей, попробуйте использовать флаг `--legacy-peer-deps`.
+

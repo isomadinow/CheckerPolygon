@@ -22,6 +22,5 @@ obj/
 .vs/
 *.code-workspace
 
-
 package-lock.json
 yarn.lock
