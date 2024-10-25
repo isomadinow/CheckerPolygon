@@ -6,7 +6,7 @@ dist/
 
 # Angular CLI и кэш
 .angular/
-
+.vscode
 
 # .NET файлы
 bin/
