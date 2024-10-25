@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Создание полигона</h2>
+    <canvas #canvas width="800" height="600" class="border" (mousedown)="onMouseDown($event)"
+      (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp($event)"></canvas>
+    <br>
+    <button class="btn btn-primary mt-2" (click)="savePolygon()">Сохранить полигон</button>
+    <button class="btn btn-secondary mt-2" (click)="resetCanvas()">Сбросить</button>
+    <button class="btn btn-success mt-2" (click)="enablePointCheck()">Проверить точку</button>
+  </div>
+  

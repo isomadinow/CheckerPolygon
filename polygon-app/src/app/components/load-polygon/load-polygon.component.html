@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Загрузить полигон</h2>
+    <button class="btn btn-primary" (click)="loadAllPolygons()">Загрузить все полигоны</button>
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let polygon of polygons">
+        Полигон ID: {{ polygon.id }}
+        <button class="btn btn-secondary btn-sm float-right" (click)="loadPolygon(polygon.id)">Загрузить</button>
+      </li>
+    </ul>
+  </div>
+  
