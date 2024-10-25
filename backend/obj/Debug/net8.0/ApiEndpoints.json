@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "PolygonApp.Controllers.PolygonController",
+    "Method": "CheckPoint",
+    "RelativePath": "api/Polygon/check-point",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PolygonApp.DTOs.PointInPolygonRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolygonApp.Controllers.PolygonController",
+    "Method": "LoadAllPolygons",
+    "RelativePath": "api/Polygon/load-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolygonApp.Controllers.PolygonController",
+    "Method": "LoadPolygonById",
+    "RelativePath": "api/Polygon/load/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolygonApp.Controllers.PolygonController",
+    "Method": "SavePolygon",
+    "RelativePath": "api/Polygon/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "polygonRequest",
+        "Type": "backend.DTOs.PolygonRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "50150:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: polygon-app/Dockerfile
+      args:
+        API_URL: http://backend:5000
+    ports:
+      - "80:80" # Nginx порт
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

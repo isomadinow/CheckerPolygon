@@ -1,0 +1,27 @@
+# Node.js и Angular
+node_modules/
+dist/
+.temp/
+*.log
+
+# Angular CLI и кэш
+.angular/
+
+
+# .NET файлы
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# IDE/Editor файлы
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+
+
+package-lock.json
+yarn.lock
