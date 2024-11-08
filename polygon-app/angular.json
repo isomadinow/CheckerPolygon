@@ -86,14 +86,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "polygon-app:build"
+            "buildTarget": "polygon-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "polygon-app:build:production"
+              "buildTarget": "polygon-app:build:production"
             },
             "development": {
-              "browserTarget": "polygon-app:build:development"
+              "buildTarget": "polygon-app:build:development"
             }
           },
           "defaultConfiguration": "development"

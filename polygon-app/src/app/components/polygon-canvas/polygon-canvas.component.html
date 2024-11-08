@@ -9,10 +9,11 @@
   </div>
 
   <ul>
-    @for (let vertex of vertices; track vertex.id) {
+    @for (vertex of vertices; track vertex.id) {
       <li>Vertex {{ vertex.id }}: ({{ vertex.x }}, {{ vertex.y }})</li>
     } @empty {
       <li>Нет вершин.</li>
     }
   </ul>
+  
 </div>
