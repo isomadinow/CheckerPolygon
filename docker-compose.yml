@@ -1,14 +1,16 @@
+version: '3.8'
+
 services:
   backend:
     build:
       context: .
       dockerfile: backend/Dockerfile
     ports:
-      - "50150:5000"
+      - "51231:5000"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:5000
-      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=PolygonApp;Username=myuser;Password=mypassword
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=PolygonApp;Username=postgres;Password=1234
     depends_on:
       - postgres
     networks:
@@ -36,7 +38,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data  
     ports:
-      - "5432:5432"  
+      - "5432:5432"  # Внешний порт 5432 перенаправляется на внутренний 5432
     networks:
       - app-network
 
