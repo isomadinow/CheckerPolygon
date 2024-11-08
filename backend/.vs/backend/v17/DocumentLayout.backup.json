@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\models\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:models\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\polygonrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\polygonrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\pointinpolygonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\pointinpolygonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\pointdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\pointdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\models\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:models\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\services\\polygonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:services\\polygonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\models\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:models\\polygon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\controllers\\polygoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:controllers\\polygoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\services\\polygonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:services\\polygonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\services\\polygondatabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\pointdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\pointdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\pointinpolygonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\pointinpolygonrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\dtos\\polygonrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|solutionrelative:dtos\\polygonrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A26D1CB-A800-46B0-9ED4-739BDBF49F59}|backend.csproj|c:\\users\\isomadinov\\source\\repos\\checkerpolygon\\backend\\data\\polygoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,15 +74,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PolygonController.cs",
               "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Controllers\\PolygonController.cs",
               "RelativeDocumentMoniker": "Controllers\\PolygonController.cs",
               "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Controllers\\PolygonController.cs",
               "RelativeToolTip": "Controllers\\PolygonController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwB0AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCcAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T08:08:30.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Polygon.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Polygon.cs",
+              "RelativeDocumentMoniker": "Models\\Polygon.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Polygon.cs",
+              "RelativeToolTip": "Models\\Polygon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:28:07.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Point.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Point.cs",
+              "RelativeDocumentMoniker": "Models\\Point.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Point.cs",
+              "RelativeToolTip": "Models\\Point.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:30:09.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PolygonService.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonService.cs",
+              "RelativeDocumentMoniker": "Services\\PolygonService.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonService.cs",
+              "RelativeToolTip": "Services\\PolygonService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCcAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:26:02.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PointDto.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\PointDto.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointDto.cs",
+              "RelativeToolTip": "DTOs\\PointDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T12:18:33.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PolygonRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PolygonRequestDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\PolygonRequestDto.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PolygonRequestDto.cs",
+              "RelativeToolTip": "DTOs\\PolygonRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:25:32.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PointInPolygonRequest.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointInPolygonRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\PointInPolygonRequest.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointInPolygonRequest.cs",
+              "RelativeToolTip": "DTOs\\PointInPolygonRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:25:23.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PolygonDatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonDatabaseService.cs",
+              "RelativeDocumentMoniker": "Services\\PolygonDatabaseService.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonDatabaseService.cs",
+              "RelativeToolTip": "Services\\PolygonDatabaseService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:59:25.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:59:42.006Z",
               "EditorCaption": ""
             },
             {
@@ -96,110 +200,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-08T08:02:36.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:59:42.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Polygon.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Polygon.cs",
-              "RelativeDocumentMoniker": "Models\\Polygon.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Polygon.cs",
-              "RelativeToolTip": "Models\\Polygon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:28:07.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PolygonDatabaseService.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonDatabaseService.cs",
-              "RelativeDocumentMoniker": "Services\\PolygonDatabaseService.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonDatabaseService.cs",
-              "RelativeToolTip": "Services\\PolygonDatabaseService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:59:25.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Point.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Point.cs",
-              "RelativeDocumentMoniker": "Models\\Point.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Models\\Point.cs*",
-              "RelativeToolTip": "Models\\Point.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:30:09.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PolygonService.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonService.cs",
-              "RelativeDocumentMoniker": "Services\\PolygonService.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\Services\\PolygonService.cs",
-              "RelativeToolTip": "Services\\PolygonService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAwCcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:26:02.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PointInPolygonRequest.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointInPolygonRequest.cs",
-              "RelativeDocumentMoniker": "DTOs\\PointInPolygonRequest.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointInPolygonRequest.cs",
-              "RelativeToolTip": "DTOs\\PointInPolygonRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:25:23.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PolygonRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PolygonRequestDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\PolygonRequestDto.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PolygonRequestDto.cs",
-              "RelativeToolTip": "DTOs\\PolygonRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:25:32.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PointDto.cs",
-              "DocumentMoniker": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\PointDto.cs",
-              "ToolTip": "C:\\Users\\isomadinov\\source\\repos\\CheckerPolygon\\backend\\DTOs\\PointDto.cs",
-              "RelativeToolTip": "DTOs\\PointDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T12:18:33.855Z",
               "EditorCaption": ""
             },
             {

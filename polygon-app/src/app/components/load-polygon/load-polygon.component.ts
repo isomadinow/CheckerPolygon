@@ -17,12 +17,14 @@ export class LoadPolygonComponent implements OnInit {
 
   constructor(private polygonService: PolygonService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   loadAllPolygons() {
-    this.polygonService.loadAllPolygons().subscribe((data: Polygon[]) => {
-      this.polygons = data;
+    this.polygonService.loadAllPolygons().subscribe((data: any) => {
+      this.polygons = data.$values.map((polygon: any) => ({
+        ...polygon,
+        vertices: polygon.vertices.$values
+      }));
     }, error => {
       console.error(error);
       alert('Ошибка при загрузке полигонов.');
@@ -30,12 +32,16 @@ export class LoadPolygonComponent implements OnInit {
   }
 
   loadPolygon(id: number) {
-    this.polygonService.loadPolygonById(id).subscribe((polygon: Polygon) => {
-      localStorage.setItem('loadedPolygon', JSON.stringify(polygon.vertices));
-      this.router.navigate(['/']);
+    this.polygonService.loadPolygon(id).subscribe((polygon: Polygon) => {
+      const vertices = polygon.vertices;
+      console.log('Сохраняемые вершины в localStorage:', vertices); // Лог для проверки
+      localStorage.setItem('loadedPolygon', JSON.stringify(vertices));
+      this.router.navigate(['/']); // Переход на страницу канваса, замените на ваш реальный путь
     }, error => {
-      console.error(error);
+      console.error('Ошибка при загрузке полигона:', error);
       alert('Ошибка при загрузке полигона.');
     });
   }
+  
+  
 }

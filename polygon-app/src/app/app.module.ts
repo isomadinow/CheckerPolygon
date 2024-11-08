@@ -9,24 +9,14 @@ import { AppComponent } from './app.component';
 import { PolygonCanvasComponent } from './components/polygon-canvas/polygon-canvas.component';
 import { LoadPolygonComponent } from './components/load-polygon/load-polygon.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    PolygonCanvasComponent,
-    LoadPolygonComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-   
-    RouterModule,
-   
-    AppRoutingModule,
-    // Другие модули
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        PolygonCanvasComponent,
+        LoadPolygonComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        RouterModule,
+        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
