@@ -12,7 +12,7 @@ export class PolygonCanvasComponent implements OnInit {
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private drawing = false;
-  private vertices: { x: number, y: number }[] = [];
+  public vertices: { id: number, x: number, y: number }[] = []; // Массив вершин
   private point: { x: number, y: number } | null = null;
   private checkingPoint = false;
 
@@ -26,15 +26,29 @@ export class PolygonCanvasComponent implements OnInit {
       const canvas = this.canvasRef.nativeElement;
       this.ctx = canvas.getContext('2d')!;
 
-
-      const loadedPolygon = localStorage.getItem('loadedPolygon');
-      if (loadedPolygon) {
-        this.vertices = JSON.parse(loadedPolygon);
-        this.drawPolygon();
-        // Удаляем из локального хранилища
-        localStorage.removeItem('loadedPolygon');
-      }
+      // Загружаем полигон с сервера или из хранилища
+      this.loadPolygon();
     }
+  }
+
+  // Загружаем полигон
+  loadPolygon() {
+    this.polygonService.loadAllPolygons().subscribe(response => {
+      if (response && response.$values && response.$values.length > 0) {
+        const polygonData = response.$values[0];
+        
+        // Преобразуем данные вершин в массив
+        this.vertices = polygonData.vertices.$values.map((vertex: any) => ({
+          id: vertex.id,
+          x: vertex.x,
+          y: vertex.y
+        }));
+
+        this.drawPolygon(); // Рисуем полигон на канвасе
+      }
+    }, error => {
+      console.error(error);
+    });
   }
 
   onMouseDown(event: MouseEvent) {
@@ -50,15 +64,13 @@ export class PolygonCanvasComponent implements OnInit {
         this.checkingPoint = false;
       } else {
         this.drawing = true;
-        this.vertices.push({ x, y });
+        this.vertices.push({ id: this.vertices.length + 1, x, y });
         this.drawPolygon();
       }
     }
   }
 
-  onMouseMove(event: MouseEvent) {
-
-  }
+  onMouseMove(event: MouseEvent) { }
 
   onMouseUp(event: MouseEvent) {
     this.drawing = false;
@@ -75,9 +87,7 @@ export class PolygonCanvasComponent implements OnInit {
       this.ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
     }
 
-    // Если нужно замкнуть полигон
-    // this.ctx.closePath();
-
+    this.ctx.closePath();
     this.ctx.strokeStyle = 'black';
     this.ctx.lineWidth = 2;
     this.ctx.stroke();
