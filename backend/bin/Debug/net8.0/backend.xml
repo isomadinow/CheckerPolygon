@@ -4,32 +4,128 @@
         <name>backend</name>
     </assembly>
     <members>
-        <member name="M:PolygonApp.Controllers.PolygonController.CheckPoint(PolygonApp.DTOs.PointInPolygonRequest)">
+        <member name="M:backend.Controllers.PolygonController.CheckPoint(backend.DTOs.PointInPolygonRequest)">
             <summary>
             Проверяет, находится ли указанная точка внутри полигона.
             </summary>
             <param name="request">Запрос, содержащий данные о точке и полигоне.</param>
             <returns>Возвращает true, если точка находится внутри полигона, иначе false.</returns>
         </member>
-        <member name="M:PolygonApp.Controllers.PolygonController.SavePolygon(backend.DTOs.PolygonRequestDto)">
+        <member name="M:backend.Controllers.PolygonController.SavePolygon(backend.DTOs.PolygonRequestDto)">
             <summary>
-            Сохраняет новый полигон.
+            Сохраняет новый полигон в базе данных.
             </summary>
             <param name="polygonRequest">Данные полигона для сохранения.</param>
             <returns>Возвращает ID нового сохраненного полигона.</returns>
         </member>
-        <member name="M:PolygonApp.Controllers.PolygonController.LoadAllPolygons">
+        <member name="M:backend.Controllers.PolygonController.LoadAllPolygons">
             <summary>
-            Загружает все сохраненные полигоны.
+            Загружает все сохраненные полигоны из базы данных.
             </summary>
             <returns>Возвращает список всех полигонов.</returns>
         </member>
-        <member name="M:PolygonApp.Controllers.PolygonController.LoadPolygonById(System.Int32)">
+        <member name="M:backend.Controllers.PolygonController.LoadPolygonById(System.Int32)">
             <summary>
-            Загружает полигон по его идентификатору.
+            Загружает полигон по его идентификатору из базы данных.
             </summary>
             <param name="id">Идентификатор полигона для загрузки.</param>
             <returns>Возвращает данные полигона с указанным ID, если он существует.</returns>
+        </member>
+        <member name="T:backend.DTOs.PointDto">
+            <summary>
+            DTO для точки полигона.
+            </summary>
+        </member>
+        <member name="T:backend.DTOs.PointInPolygonRequest">
+            <summary>
+            Запрос для проверки нахождения точки внутри заданного полигона.
+            </summary>
+        </member>
+        <member name="P:backend.DTOs.PointInPolygonRequest.Point">
+            <summary>
+            Точка, которую нужно проверить на вхождение в полигон.
+            </summary>
+        </member>
+        <member name="P:backend.DTOs.PointInPolygonRequest.Polygon">
+            <summary>
+            Полигон, в котором выполняется проверка нахождения точки.
+            </summary>
+        </member>
+        <member name="T:backend.DTOs.PolygonRequestDto">
+            <summary>
+            Запрос для создания или сохранения нового полигона с заданными вершинами.
+            </summary>
+        </member>
+        <member name="P:backend.DTOs.PolygonRequestDto.Vertices">
+            <summary>
+            Список точек, представляющих вершины полигона.
+            </summary>
+        </member>
+        <member name="T:backend.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:backend.Models.Point">
+            <summary>
+            Представляет координаты точки в 2D-пространстве.
+            </summary>
+        </member>
+        <member name="T:backend.Models.Polygon">
+            <summary>
+            Представляет полигон, заданный уникальным идентификатором и списком вершин.
+            </summary>
+        </member>
+        <member name="P:backend.Models.Polygon.Id">
+            <summary>
+            Уникальный идентификатор полигона.
+            </summary>
+        </member>
+        <member name="P:backend.Models.Polygon.Vertices">
+            <summary>
+            Список точек, представляющих вершины полигона в порядке обхода.
+            </summary>
+        </member>
+        <member name="M:backend.Services.PolygonDatabaseService.SavePolygon(backend.Models.Polygon)">
+            <summary>
+            Сохраняет полигон с уникальным идентификатором в базе данных PostgreSQL.
+            </summary>
+            <param name="polygon">Экземпляр полигона для сохранения.</param>
+            <returns>Уникальный идентификатор сохраненного полигона.</returns>
+        </member>
+        <member name="M:backend.Services.PolygonDatabaseService.LoadAllPolygons">
+            <summary>
+            Загружает все полигоны из базы данных.
+            </summary>
+            <returns>Список всех полигонов из базы данных.</returns>
+        </member>
+        <member name="M:backend.Services.PolygonDatabaseService.LoadPolygonById(System.Int32)">
+            <summary>
+            Загружает полигон по его уникальному идентификатору из базы данных.
+            </summary>
+            <param name="id">Уникальный идентификатор полигона.</param>
+            <returns>Экземпляр полигона, если найден, иначе null.</returns>
+        </member>
+        <member name="M:backend.Services.PolygonService.IsPointInPolygon(backend.Models.Point,System.Collections.Generic.List{backend.Models.Point})">
+            <summary>
+            Определяет, находится ли указанная точка внутри многоугольника.
+            </summary>
+            <param name="point">Точка, которую нужно проверить.</param>
+            <param name="polygonVertices">Список вершин многоугольника в порядке обхода.</param>
+            <returns>Возвращает true, если точка находится внутри многоугольника, иначе false.</returns>
+            <remarks>
+            Метод реализует алгоритм Ray Casting. 
+            Алгоритм работает, проверяя, сколько раз горизонтальный луч, 
+            исходящий из проверяемой точки, пересекает рёбра многоугольника.
+            Если число пересечений нечётное, точка находится внутри, если чётное — снаружи.
+            </remarks>
         </member>
     </members>
 </doc>

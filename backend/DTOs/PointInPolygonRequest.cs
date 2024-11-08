@@ -1,6 +1,6 @@
-using PolygonApp.Models;
+using backend.Models;
 
-namespace PolygonApp.DTOs
+namespace backend.DTOs
 {
     /// <summary>
     /// Запрос для проверки нахождения точки внутри заданного полигона.

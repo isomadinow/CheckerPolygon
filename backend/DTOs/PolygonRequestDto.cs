@@ -1,4 +1,4 @@
-﻿using PolygonApp.Models;
+﻿using backend.Models;
 
 namespace backend.DTOs
 {
@@ -10,6 +10,7 @@ namespace backend.DTOs
         /// <summary>
         /// Список точек, представляющих вершины полигона.
         /// </summary>
-        public List<Point> Vertices { get; set; } = new List<Point>();
+        public List<PointDto> Vertices { get; set; } = new List<PointDto>();
+
     }
 }
