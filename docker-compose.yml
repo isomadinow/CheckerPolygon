@@ -17,7 +17,7 @@ services:
       context: .
       dockerfile: backend/Dockerfile
     ports:
-      - "5000:5000"
+    - "5000:5000"  
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:5000
@@ -33,7 +33,7 @@ services:
       context: .
       dockerfile: polygon-app/Dockerfile
       args:
-        API_URL: /api  
+        API_URL: http://localhost:5000 
     ports:
       - "80:80"
     depends_on:
