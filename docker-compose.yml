@@ -1,34 +1,4 @@
-version: '3.8'
-
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile
-    ports:
-      - "51231:5000"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:5000
-      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=PolygonApp;Username=postgres;Password=1234
-    depends_on:
-      - postgres
-    networks:
-      - app-network
-
-  frontend:
-    build:
-      context: .
-      dockerfile: polygon-app/Dockerfile
-      args:
-        API_URL: http://backend:5000
-    ports:
-      - "80:80" 
-    depends_on:
-      - backend
-    networks:
-      - app-network
-
   postgres:
     image: postgres:latest
     environment:
@@ -38,9 +8,39 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data  
     ports:
-      - "5432:5432"  # Внешний порт 5432 перенаправляется на внутренний 5432
+      - "54032:5432"
     networks:
       - app-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=PolygonApp;Username=postgres;Password=1234
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    restart: always
+
+  frontend:
+    build:
+      context: .
+      dockerfile: polygon-app/Dockerfile
+      args:
+        API_URL: /api  
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    restart: always
 
 networks:
   app-network:

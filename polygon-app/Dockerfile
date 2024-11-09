@@ -1,11 +1,15 @@
+
 FROM node:18 AS build
 
 WORKDIR /app
 COPY polygon-app/package*.json ./
 RUN npm install --legacy-peer-deps
 COPY polygon-app/. .
+
+
 ARG API_URL
-RUN echo "export const environment = { production: true, apiUrl: '$API_URL' };" > src/environments/environment.prod.ts
+RUN echo "export const environment = { production: true, API_URL: '$API_URL' };" > src/environments/environment.prod.ts
+
 RUN npm run build -- --output-path=dist/polygon-app/browser --configuration=production
 
 FROM nginx:alpine

@@ -1,5 +1,4 @@
 export const environment = {
-    production: true,
-    API_URL: 'API_URL_PLACEHOLDER'
-  };
-  
+  production: true,
+  API_URL: '/api' 
+};

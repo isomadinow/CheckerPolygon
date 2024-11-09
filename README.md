@@ -1,85 +1,125 @@
-# CheckerPolygon Project
+# Проект CheckerPolygon
 
-Проект **CheckerPolygon** представляет собой приложение для работы с полигонами, состоящее из backend на ASP.NET Core и frontend на Angular. Для упрощения развёртывания и управления обеими частями используется **Docker Compose**.
+Привет! Это проект **CheckerPolygon**. Он состоит из бэкенда на **ASP.NET Core** и фронтенда на **Angular**. Мы используем **Docker Compose**, чтобы всё это запускать вместе.
 
 ## Структура проекта
 
-- `/backend` - серверная часть проекта на ASP.NET Core.
-- `/polygon-app` - клиентская часть на Angular.
+- `/backend` — тут находится серверная часть на ASP.NET Core.
+- `/polygon-app` — здесь лежит клиентская часть на Angular.
+- `/assets` — картинки и другие ресурсы.
 
-Для более детальной информации см. отдельные инструкции для каждой части:
-- [Backend README](./backend/README.md)
-- [Frontend README](./polygon-app/README.md)
+## Примеры работы программы
 
+### Проверка точки внутри полигона
 
-## Пример работы программы
-#### Нахождение точки внутри полигона
-![alt text](assets/image_1.png)
+![Пример 1](assets/image_1.png)
 
-#### Нахождение точки внутри полигона
-![alt text](assets/image_2.png)
+### Результат проверки
 
-#### Загрузка 
+![Пример 2](assets/image_2.png)
 
-![alt text](assets/image_3.png)
-## Запуск проекта
+### Загрузка данных
 
-### Использование Docker Compose
+![Пример 3](assets/image_3.png)
 
-Для запуска всех сервисов выполните следующую команду в корневом каталоге проекта:
+## Как запустить проект
 
-```bash
-docker-compose up --build
-```
+### Требования
 
-После запуска:
-- **Backend API** будет доступен по адресу: `http://localhost:50150` или `http://ip:50150`
-- **Frontend** будет доступен по адресу: `http://localhost:80` или `http://ip:80`
+- Установленный **Docker** и **Docker Compose**.
 
-## Docker Compose
+### Шаги
 
-Docker Compose позволяет запускать и управлять несколькими сервисами, определёнными в одном файле, с использованием одной команды. Для проекта **CheckerPolygon** Docker Compose развёртывает оба компонента: **backend** и **frontend**.
+1. **Клонируйте репозиторий**:
 
-### Docker Compose файл
+   ```bash
+   git clone https://github.com/isomadinow/CheckerPolygon
+   cd CheckerPolygon
+   ```
 
-Файл `docker-compose.yml` определяет конфигурацию двух сервисов: `backend` и `frontend`. Ниже описано, как работает каждая часть:
+2. **Запустите Docker Compose**:
 
-- **backend**:
-  - Собирается на основе Dockerfile в папке `backend`.
-  - Прослушивает запросы на порту 5000 и маппится на порт 50150 локально.
-  - Определены переменные среды, такие как `ASPNETCORE_ENVIRONMENT` и `ASPNETCORE_URLS` для настройки среды разработки.
+   ```bash
+   docker-compose up --build
+   ```
 
-- **frontend**:
-  - Собирается на основе Dockerfile в папке `polygon-app`.
-  - Передаёт переменную `API_URL` для указания адреса backend.
-  - Порт для фронтенда — 80, где Nginx обрабатывает запросы и перенаправляет их к Angular приложению.
-  - Определена зависимость от `backend`, чтобы гарантировать запуск backend перед frontend.
+   Эта команда соберёт образы и запустит все сервисы.
 
-### Сети
+3. **Откройте приложение**:
 
-В проекте используется одна сеть `app-network`, которая соединяет backend и frontend для внутреннего взаимодействия. Это упрощает вызовы между сервисами.
+   - **Фронтенд** будет доступен по адресу: `http://localhost:80`.
+   - **Бэкенд** работает внутри Docker и доступен через фронтенд (http://localhost:5000/swagger/index.html).
 
-## Запуск проекта с Docker Compose
+## Детали проекта
 
-Чтобы развернуть проект, выполните следующую команду из корневой папки проекта:
+### Docker Compose
 
-```bash
-docker-compose up --build
-```
+В файле `docker-compose.yml` описаны три сервиса:
 
-Эта команда соберёт оба Docker образа и запустит контейнеры для каждого сервиса.
+- **postgres** — база данных PostgreSQL.
+- **backend** — серверное приложение на ASP.NET Core.
+- **frontend** — клиентское приложение на Angular с Nginx.
 
-### Доступность
+Они все подключены к сети `app-network`, чтобы общаться между собой.
 
-- После успешного запуска:
-  - **Backend API** будет доступен по адресу: `http://localhost:50150` или `http://ip:50150`.
-  - **Frontend** будет доступен по адресу: `http://localhost:80` или `http://ip:80`.
+### Фронтенд
+
+- Написан на Angular.
+- Использует Nginx для обслуживания и проксирования запросов к бэкенду.
+- Файл `environment.prod.ts` настроен так, чтобы API-запросы шли на `/api`.
+
+### Бэкенд
+
+- Написан на ASP.NET Core.
+- Подключается к базе данных PostgreSQL.
+- Строка подключения настроена через переменные окружения.
+
+### База данных
+
+- Используется PostgreSQL.
+- Данные сохраняются в Docker volume `postgres_data`.
 
 ## Полезные команды
 
-- **Запуск контейнеров**: `docker-compose up`
-- **Пересобрать и запустить контейнеры**: `docker-compose up --build`
-- **Остановка контейнеров**: `docker-compose down`
-- **Проверка запущенных контейнеров**: `docker ps`
+- **Запуск проекта**:
 
+  ```bash
+  docker-compose up
+  ```
+
+- **Остановка проекта**:
+
+  ```bash
+  docker-compose down
+  ```
+
+- **Пересобрать образы и запустить**:
+
+  ```bash
+  docker-compose up --build
+  ```
+
+- **Посмотреть логи**:
+
+  ```bash
+  docker-compose logs
+  ```
+
+## Если возникли проблемы
+
+- Убедитесь, что Docker и Docker Compose установлены и работают.
+- Проверьте, не заняты ли порты 80 или 5432 другими приложениями.
+- Посмотрите логи контейнеров для ошибок:
+
+  ```bash
+  docker-compose logs backend
+  docker-compose logs frontend
+  docker-compose logs postgres
+  ```
+
+- Попробуйте пересобрать образы:
+
+  ```bash
+  docker-compose up --build
+  ```
 

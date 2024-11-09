@@ -1,11 +1,11 @@
-# backend/entrypoint.sh
 #!/bin/bash
 
-# Ожидаем доступности базы данных
-until dotnet ef database update; do
-  echo "Ждем доступности базы данных..."
+# Проверяем доступность базы данных
+until nc -z -v -w30 postgres 5432
+do
+  echo "Ожидание доступности базы данных..."
   sleep 3
 done
 
-# Запускаем приложение после успешного выполнения миграций
-dotnet backend.dll
+echo "База данных доступна. Запуск backend..."
+exec dotnet backend.dll
